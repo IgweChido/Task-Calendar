@@ -1,0 +1,124 @@
+@import '../Timeline.scss';
+
+.day-date{
+    // border: 1px solid green;
+    display: flex;
+    
+
+    .d-day{
+        // border:1px solid pink;
+
+        p{
+            margin-top: 3px;
+            font-weight: 600;
+            font-size: 24px;
+        }
+    }
+
+    .d-date{
+        // border:1px solid blue;
+        margin-left: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $mainColor;
+        p{
+            text-align: center;
+            margin-top: 8px;
+            font-weight: 600;
+            color: white;
+        }
+    }
+
+    .d-date11{
+        border:2px solid $mainColor;
+        margin-left: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: none;
+        p{
+            text-align: center;
+            margin-top: 8px;
+            font-weight: 600;
+            color: black;
+        }
+    }
+}
+
+
+.d-events{
+    //   border: 1px solid yellow;
+      display: flex;
+      position: absolute;
+      right: 20px;
+      top:28px;
+     
+
+    p{
+        // border: 1px solid red;
+    }
+
+    .d-circle{
+        margin-top: 5px;
+        margin-left: 10px;
+        // border: 1px solid aqua;
+        border-radius: 100%;
+        width: 15px;
+        height: 15px;
+        background-color: $sideColor;
+    }
+}
+
+
+
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+    .day-date{
+        margin-left: 10px;
+       
+    
+        .d-day{
+           
+    
+            p{
+                
+                font-size: 16px;
+            }
+        }
+    
+        .d-date{
+           
+            width: 30px;
+            height: 30px;
+           
+            p{
+              
+                margin-top: 6px;
+              
+                font-size: 13px;
+            }
+        }
+    }
+    
+    
+    .d-events{
+         right: 10px;
+         
+    
+        p{
+            font-size: 13px;
+            
+        }
+    
+        .d-circle{
+           
+           
+            width: 10px;
+            height: 10px;
+           
+        }
+    }
+
+}

@@ -1,0 +1,24 @@
+@import '../Timeline.scss';
+
+
+.week{
+    // padding: 20px;
+    // border: 1px solid green;
+    height: 100vh;
+    max-width: 1400px;
+    border-radius: 35px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    margin: auto;
+    display: block;
+    margin-top: 105px;
+    margin-bottom: 50px;
+    
+    
+}
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+    .week{
+        margin-top: 220px !important;
+    }
+}

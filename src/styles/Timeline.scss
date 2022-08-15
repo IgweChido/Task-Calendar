@@ -1,0 +1,342 @@
+//******************** Imports
+
+//******************** Variables
+$mainColor: #4949c9;
+$sideColor: #ff8021;
+$grey:#eaedf1;
+
+//******************** Styles
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (min-width: 1500px){
+    .TL-head{
+        left:50% !important;
+        margin-left: -750px !important;
+        padding-right: 0 !important;
+    }
+}
+
+.TL-head{
+    top:0px;
+    // border: 1px solid blue;
+    display: flex;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 60px;
+    align-items: center;
+    background-color: white;
+    z-index: 4;
+    
+   
+
+    
+    // TL1 Section
+    .TL1{
+        width: 50%;
+        // border:1px solid green;
+
+        p{
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+    }
+
+
+     // TL2 Section
+    .TL2{
+        width: 25%;
+        // border:1px solid yellow;
+
+        .open-div{
+            display: flex;
+            width: 40%;
+            border: 1px solid #eaedf1;
+            height: 50px;
+            border-radius: 5px;
+            position: relative;
+            padding-left: 10px;
+
+            p{
+                // border: 1px solid green;
+                margin-top: 12px;
+            }
+
+            .calendar{
+                // border: 1px solid yellow;
+                margin-top: 12px;
+                margin-right: 5px;
+
+                img{
+
+                }
+
+            }
+
+            .arrow-d{
+                // border: 1px solid yellow;
+                position: absolute;
+                right: 10px;
+                top:12px;
+                cursor: pointer;
+
+                img{
+
+                }
+            }
+
+
+            .arrow-d1{
+                // border: 1px solid yellow;
+                position: absolute;
+                right: 10px;
+                top:12px;
+                cursor: pointer;
+
+                img{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+
+        .hidden-div{
+            display: none;
+            width: 10%;
+            position:absolute;
+            top: 55px;
+            background-color: white;
+            border: 1px solid #eaedf1;
+            border-radius: 5px;
+            z-index: 1;
+
+            a{
+                padding: 10px;
+                background-color: white;
+                display: block;
+                text-decoration: none;
+                color: black;
+
+            }
+
+            a:hover{
+                background-color: #4949c9;
+                color: white;
+            }
+
+            
+            
+        }
+
+        .active{
+            display: block;
+        }
+
+       
+    }
+
+    // TL3 Section
+    .TL3{
+        width: 25%;
+        // border:1px solid blue;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+
+        .TL3-div1{
+            // border: 1px solid red;
+            margin-right: 20px ;
+
+            p{
+                margin-top: 14px;
+            }
+        }
+
+        .TL3-div2{
+            // border: 1px solid yellow;
+           align-items: center;
+            display: flex;
+           
+
+            .TL-arrow1{
+                padding: 5px;
+                height: 50px;
+                width: 50px;
+                border: 1px solid #eaedf1;
+                border-radius: 5px 0 0 5px;
+                cursor: pointer;
+                
+               
+
+                img{
+                    // border:1px solid gray;
+                    display: block;
+                    margin: 10px auto 0;
+
+                }
+
+            }
+
+            .disabled{
+                cursor: not-allowed;
+            }
+
+            .TL-arrow2{
+                padding: 5px;
+                height: 50px;
+                width: 50px;
+                border: 1px solid #eaedf1;
+                border-radius: 0 5px 5px 0 ;
+                cursor: pointer;
+                
+               
+
+                img{
+                    // border:1px solid gray;
+                    display: block;
+                    margin: 10px auto 0;
+
+                }
+
+            }
+        }
+    }
+}
+
+/* Large devices (landscape tablets, 1241px and down) ************************************/
+@media only screen and (max-width: 1241px){
+
+
+    .TL1{
+        width: 40% !important;
+    }
+
+    .TL2{
+        width:30% !important;
+
+        .open-div{
+            width: 60% !important;
+        }
+    }
+
+    .TL3{
+        width: 30% !important;
+    }
+
+}
+
+
+
+/* Large devices (landscape tablets, 1041px and down) ************************************/
+@media only screen and (max-width: 1041px){
+
+
+    .TL1{
+        width: 30% !important;
+    }
+
+    .TL2{
+        width:30% !important;
+
+        .open-div{
+            width: 60% !important;
+        }
+
+        .hidden-div{
+         
+            width: 15% !important;
+        }
+    }
+
+    .TL3{
+        width: 40% !important;
+    }
+
+}
+
+
+/* Large devices (landscape tablets, 1041px and down) ************************************/
+@media only screen and (max-width: 751px){
+
+
+    .TL1{
+        width: 20% !important;
+    }
+
+    .TL2{
+        width:30% !important;
+
+        .open-div{
+            width: 70% !important;
+        }
+    }
+
+    .TL3{
+        width: 50% !important;
+    }
+
+}
+
+
+/* Large devices (landscape tablets, 1041px and down) ************************************/
+@media only screen and (max-width: 610px){
+
+    .TL-head{
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        padding: 20px 10px 40px !important;
+
+
+        .TL1{
+            width: 100% !important;
+            margin-bottom: 15px;
+        }
+    
+        .TL2{
+            width:100% !important;
+            margin-bottom: 15px;
+    
+            .open-div{
+                width: 60% !important;
+            }
+
+
+            .hidden-div{
+         
+                top:110px !important;
+                width: 40% !important;
+            }
+        }
+    
+        .TL3{
+            width: 100% !important;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+    
+
+    }
+
+}
+
+
+
+
+
+
+

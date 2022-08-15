@@ -1,0 +1,197 @@
+@import '../Timeline.scss';
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (min-width: 1440px){
+    .week-head{
+        left:50%;
+        margin-left: -700px;
+    }
+}
+
+.week-head{
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    // border: 1px solid red;
+    border-radius: 35px 35px 0 0;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 20px 100px;
+    border-bottom:3px solid $grey;
+    position: fixed;
+    width: 96.5vw;
+    background-color: white;
+    z-index: 3;
+    right: 20px;
+    
+   
+   
+   
+    
+}
+
+.w-head-main{
+    // border:1px solid green;
+    width: 14.28%;
+    
+}
+
+
+/* Large devices (landscape tablets, 1075px and down) ************************************/
+@media only screen and (max-width: 1035px){
+    .week-head{
+        width: 95vw;
+    }
+}
+/* Large devices (landscape tablets, 760px and down) ************************************/
+@media only screen and (max-width: 760px){
+    .week-head{
+        width: 94vw;
+    }
+}
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+
+    .week-head{
+        padding: 20px 0 20px 45px;
+        right: 10px !important;
+        width: 96vw;
+    }
+}
+
+/* Large devices (landscape tablets, 480px and down) ************************************/
+@media only screen and (max-width: 480px){
+    .week-head{
+        width: 95vw;
+    }
+}
+
+/* Large devices (landscape tablets, 390px and down) ************************************/
+@media only screen and (max-width: 390px){
+    .week-head{
+        width: 94vw;
+    }
+}
+
+/* Large devices (landscape tablets, 320px and down) ************************************/
+@media only screen and (max-width: 320px){
+    .week-head{
+        width: 93vw;
+    }
+}
+
+
+
+
+
+// change the days to one letter
+/* Large devices (landscape tablets, 410px and down) ************************************/
+@media only screen and (max-width: 410px){
+
+    
+}
+
+
+
+
+// **************** Month Head **************************
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (min-width: 1440px){
+    .month-head{
+        left:50%;
+        margin-left: -700px;
+    }
+}
+
+.month-head{
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    max-width: 1400px;
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 20px 100px;
+    border-bottom:3px solid $grey;
+    position: fixed;
+    width: 96.5vw;
+    background-color: white;
+    z-index: 3;
+    right: 20px;
+    border-radius: 35px 35px 0 0;
+     
+   
+   
+    
+}
+
+.m-head-main{
+    // border:1px solid green;
+    width: 14.28%;
+}
+
+/* Large devices (landscape tablets, 1075px and down) ************************************/
+@media only screen and (max-width: 1035px){
+    .month-head{
+        width: 95vw;
+    }
+}
+/* Large devices (landscape tablets, 760px and down) ************************************/
+@media only screen and (max-width: 760px){
+    .month-head{
+        width: 94vw;
+    }
+}
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+
+    .month-head{
+        padding: 20px 0 20px 45px;
+        right: 10px !important;
+        width: 96vw;
+    }
+}
+
+/* Large devices (landscape tablets, 480px and down) ************************************/
+@media only screen and (max-width: 480px){
+    .month-head{
+        width: 95vw;
+    }
+}
+
+/* Large devices (landscape tablets, 390px and down) ************************************/
+@media only screen and (max-width: 390px){
+    .month-head{
+        width: 94vw;
+    }
+}
+
+/* Large devices (landscape tablets, 320px and down) ************************************/
+@media only screen and (max-width: 320px){
+    .month-head{
+        width: 93vw;
+    }
+}
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+
+    .month-head{
+        padding: 20px 0 20px 10px;
+    }
+}
+
+
+
+
+
+// change the days to one letter
+/* Large devices (landscape tablets, 410px and down) ************************************/
+@media only screen and (max-width: 410px){
+
+    
+}
+
+
+
+
+
+

@@ -1,0 +1,145 @@
+@import './Timeline.scss';
+
+
+.task-look{
+    // border: 1px solid red;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    position: absolute;
+    width: 500px;
+    right: 50%;
+    margin-right: -250px;
+    top: 150px;
+    padding: 40px 20px;
+    // background-color: #e9c4b3;
+    border-radius: 5px;
+}
+
+.look-title{
+    // border: 1px solid yellow;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+
+    p{
+        // text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+
+.look-date{
+    // border: 1px solid red;
+    margin-bottom: 20px;
+
+    p{
+
+    }
+}
+
+
+.look-note{
+    // border: 1px solid yellow;
+    margin-bottom: 20px;
+
+    p{
+
+    }
+}
+
+.delete-task{
+    // border: 1px solid green;
+    width: fit-content;
+    cursor: pointer;
+    display: block;
+  
+     margin: 40px  auto 0px;
+
+    
+}
+
+
+
+
+// adding task prompt
+
+.at-prompt{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    position: absolute;
+    width: 400px;
+    right: 50%;
+    margin-right: -200px;
+    top: 200px;
+    padding: 40px 20px;
+    z-index: 5;
+    // background-color: #e9c4b3;
+    background-color:#00AF65;
+    border-radius: 5px;
+
+    P{
+        text-align: center;
+        color: white;
+        font-weight: 600;
+    }
+}
+
+.at-prompt1{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    position: absolute;
+    width: 400px;
+    right: 50%;
+    margin-right: -200px;
+    top: 200px;
+    padding: 40px 20px;
+    z-index: 5;
+    // background-color: #e9c4b3;
+    background-color:#C50000;
+    border-radius: 5px;
+
+    P{
+        text-align: center;
+        color: white;
+        font-weight: 600;
+    }
+}
+
+
+
+
+
+
+
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+    .task-look{
+        top:35% !important;
+        width: 80% !important;
+        margin-right: -40% !important;
+        // height: 400px !important;
+    }
+
+    .at-prompt, .at-prompt1{
+        top:50% !important;
+        width: 60% !important;
+        margin-right: -30% !important;
+        // height: 400px !important;
+    }
+}
+
+
+/* Large devices (landscape tablets, 410px and down) ************************************/
+@media only screen and (max-width: 410px){
+    .task-look{
+        width: 95% !important;
+        margin-right: -47.5% !important;
+    }
+
+    .at-prompt,.at-prompt1{
+        width: 80% !important;
+        margin-right: -40% !important;
+    }
+}

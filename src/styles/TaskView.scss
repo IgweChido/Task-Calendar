@@ -1,0 +1,740 @@
+@import '../styles/Timeline.scss';
+
+.taskview-overlay{
+    // border: 1px solid green;
+    // display: none;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right:0;
+    height: 100vh;
+    width: 100vw;
+    
+    // overflow: auto;
+}
+
+
+.t-prompt{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    position: fixed;
+    // border: 1px solid yellow;
+    background-color: $mainColor;
+    bottom: 30px;
+    right:50px;
+    cursor: pointer;
+    z-index: 3;
+
+    img{
+        // border:1px solid green;
+        display: block;
+        margin: 18px auto 0;
+
+    }
+}
+
+.t-form{
+    // border: 1px solid red;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    position: absolute;
+    width: 500px;
+    right: 50%;
+    margin-right: -250px;
+    top: 50px;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 5px;
+    height: 500px;
+    
+   
+
+
+    .t-scroll{
+       
+        overflow-y: auto;
+        // -ms-overflow-style: none;
+        // scrollbar-width: 5px;
+        height: 420px;
+        
+        
+        // border: 1px solid yellow;
+        
+        margin-top: 10px;
+        label{
+                // border: 1px solid green;
+                font-weight: 600;
+                font-size: 24px;
+                text-align: center;
+                display: block;
+                margin-bottom: 10px;
+                
+            }
+    }
+
+
+   
+    .t-scroll::-webkit-scrollbar{
+        width: 5px;
+       
+    }
+
+    .t-scroll::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        
+      }
+
+      .t-scroll::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px; 
+      }
+
+      .t-scroll::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+
+
+}
+
+
+
+
+.t-cancel{
+    position: absolute;
+    right:20px;
+    top:20px;
+    // border:1px solid red;
+    cursor: pointer;
+}
+
+
+.task-header{
+    // border:1px solid black;
+    width: 98%;
+    display: block;
+    margin: auto;
+
+    input[type=text]{
+        width: 100%;
+        height: 50px;
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+        border: 1px solid $grey;
+        outline: none;
+        
+
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+}
+
+
+.t-time-date{
+    // margin-top: 10px;
+    // border: 1px solid brown;
+    width: 98%;
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ 
+}
+
+
+// active for all the hidden years
+
+
+.t-task-year{
+    border: 1px solid $grey;
+    width: 45%;
+    border-radius: 3px;
+    position:relative;
+    padding: 5px 10px;
+    height: 50px;
+    display: flex;
+    
+    
+    .selected-op{
+        // border: 1px solid green;
+        margin-top:12px;
+
+        P{
+            font-size: 14px;
+        }
+        
+        // width: fit-content;
+
+    }
+
+    .t-ar-down{
+
+        // border: 1px solid red;
+        position: absolute;
+        right: 10px;
+        top:15px;
+        cursor: pointer;
+    }
+
+    .t-ar-down1{
+
+        // border: 1px solid red;
+        position: absolute;
+        right: 10px;
+        top:15px;
+        cursor: pointer;
+
+        img{
+            transform: rotate(180deg);
+        }
+    }
+
+
+
+    .hidden-years{
+        display: none;
+        width: 100%;
+        background-color: white;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        top:50px;
+        height: 200px;
+        overflow-y: auto;
+        z-index: 1;
+       
+
+        p{
+            padding: 10px;
+            background-color: white;
+            display: block;
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            cursor: pointer;
+
+        }
+
+        p:hover{
+            background-color: #4949c9;
+            color: white;
+        }
+    }
+
+    .hidden-years::-webkit-scrollbar{
+        width: 5px;
+       
+    }
+
+    .hidden-years::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        
+      }
+
+      .hidden-years::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px; 
+      }
+
+      .hidden-years::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+
+    .hy-active{
+        display: block;
+    }
+    
+}
+
+
+.t-task-month{
+    width: 45%;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    position:relative;
+    padding: 5px 10px;
+    height: 50px;
+    display: flex;
+
+    .selected-op{
+        // border: 1px solid green;
+        margin-top:12px;
+        
+        // width: fit-content;
+
+        P{
+            font-size: 14px;
+        }
+
+    }
+
+    .t-ar-down{
+
+        // border: 1px solid red;
+        position: absolute;
+        right: 10px;
+        top:15px;
+        cursor: pointer;
+    }
+
+    .t-ar-down1{
+
+        // border: 1px solid red;
+        position: absolute;
+        right: 10px;
+        top:15px;
+        cursor: pointer;
+
+        img{
+            transform: rotate(180deg);
+        }
+    }
+
+
+
+    .hidden-years{
+        display: none;
+        width: 100%;
+        background-color: white;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        top:50px;
+        height: 200px;
+        overflow-y: auto;
+        z-index: 1;
+       
+
+        p{
+            padding: 10px;
+            background-color: white;
+            display: block;
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            cursor: pointer;
+
+        }
+
+        p:hover{
+            background-color: #4949c9;
+            color: white;
+        }
+    }
+
+    .hidden-years::-webkit-scrollbar{
+        width: 5px;
+       
+    }
+
+    .hidden-years::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        
+      }
+
+      .hidden-years::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px; 
+      }
+
+      .hidden-years::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+
+
+    .hy-active{
+        display: block;
+    }
+    
+}
+
+
+.t-task-day{
+    margin-top: 10px;
+    width: 45%;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    position:relative;
+    padding: 5px 10px;
+    height: 50px;
+    display: flex;
+
+    .selected-op{
+        // border: 1px solid green;
+        margin-top:12px;
+        
+        // width: fit-content;
+
+        P{
+            font-size: 14px;
+        } 
+
+    }
+
+    .t-ar-down{
+
+        // border: 1px solid red;
+        position: absolute;
+        right: 10px;
+        top:15px;
+        cursor: pointer;
+    }
+
+    .t-ar-down1{
+
+        // border: 1px solid red;
+        position: absolute;
+        right: 10px;
+        top:15px;
+        cursor: pointer;
+
+        img{
+            transform: rotate(180deg);
+        }
+    }
+
+
+
+    .hidden-years{
+        display: none;
+        width: 100%;
+        background-color: white;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        top:50px;
+        height: 200px;
+        overflow-y: auto;
+        // -ms-overflow-style: none;
+	    // scrollbar-width: none;
+       
+
+        p{
+            padding: 10px;
+            background-color: white;
+            display: block;
+            text-decoration: none;
+            color: black;
+            // border: 1px solid red;
+            font-size: 14px;
+            cursor: pointer;
+
+        }
+
+        p:hover{
+            background-color: #4949c9;
+            color: white;
+        }
+    }
+
+    .hidden-years::-webkit-scrollbar{
+        width: 5px;
+       
+    }
+
+    .hidden-years::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        
+      }
+
+      .hidden-years::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px; 
+      }
+
+      .hidden-years::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+
+
+    .hy-active{
+        display: block;
+    }
+
+   
+    
+    
+}
+
+
+
+
+.t-task-time{
+
+    // border: 1px solid red;
+    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    position:relative;
+    padding: 5px 10px;
+    height: 50px;
+    display: flex;
+    
+
+    .selected-op{
+        // border: 1px solid green;
+        margin-top:12px;
+        
+        // width: fit-content;
+
+        P{
+            font-size: 14px;
+        } 
+
+    }
+
+    .t-ar-down{
+
+        // border: 1px solid red;
+        position: absolute;
+        right: 10px;
+        top:15px;
+        cursor: pointer;
+    }
+
+    .t-ar-down1{
+
+        // border: 1px solid red;
+        position: absolute;
+        right: 10px;
+        top:15px;
+        cursor: pointer;
+
+        img{
+            transform: rotate(180deg);
+        }
+    }
+
+
+    .hidden-years{
+        display: none;
+        width: 100%;
+        background-color: white;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        top:50px;
+        height: 200px;
+        overflow-y: auto;
+        z-index: 1;
+        // -ms-overflow-style: none;
+	    // scrollbar-width: none;
+       
+
+        p{
+            padding: 10px;
+            background-color: white;
+            display: block;
+            text-decoration: none;
+            color: black;
+            // border: 1px solid red;
+            font-size: 14px;
+            cursor: pointer;
+
+        }
+
+        p:hover{
+            background-color: #4949c9;
+            color: white;
+        }
+    }
+
+    .hidden-years::-webkit-scrollbar{
+        width: 5px;
+       
+    }
+
+    .hidden-years::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        
+      }
+
+      .hidden-years::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px; 
+      }
+
+      .hidden-years::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+
+
+    .hy-active{
+        display: block;
+    }
+
+   
+    
+    
+
+
+}
+
+
+
+
+.t-notes{
+    // border: 1px solid red;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 98%;
+
+    textarea{
+        display: block;
+        margin: auto;
+        width:100%;
+        resize: none;
+        padding: 15px;
+        height: 200px;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif !important;
+        outline: none;
+    }
+}
+
+
+
+
+// Pick color
+
+.color-picker{
+    margin: 10px auto 0;
+    width: 98%;
+    // border: 1px solid green;
+
+    p{
+        
+
+    }
+}
+
+.active-color{
+    border: 3px solid $mainColor;
+}
+
+.pick-color{
+    margin-top: 10px;
+    // border: 1px solid brown;
+    display: flex;
+
+    .pcolor1{
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        background-color: #e9c4b3;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .pcolor2{
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        background-color: #b6d7c9;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .pcolor3{
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        background-color: #c4c4de;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+}
+
+
+
+// submit button
+
+.s-btn{
+    width: 98%;
+    display: block;
+    margin: auto;
+    // border: 1px solid green;
+    .submit-button{
+        margin-top: 30px;
+        height: 50px;
+        color: white;
+        background-color: $mainColor;
+        border: none;
+        width: 40%;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+
+
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+
+    .t-form{
+        top:20% !important;
+        width: 80% !important;
+        margin-right: -40% !important;
+        padding: 40px 10px !important;
+    }
+
+}
+
+
+
+/* Large devices (landscape tablets, 410px and down) ************************************/
+@media only screen and (max-width: 410px){
+
+    .t-form{
+        width: 95% !important;
+        margin-right: -47.5% !important;
+    }
+
+
+    .t-time-date{
+       
+       
+        flex-direction: column;
+       
+     
+    }
+
+    .t-task-year{
+        width: 100% !important;
+        margin:0 0 10px !important;
+       
+    }
+
+    .t-task-month{
+        width: 100% !important;
+        margin:0 0 10px !important;
+       
+    }
+
+    .t-task-day{
+        width: 100% !important;
+        margin:0 0 10px !important;
+       
+    }
+
+    .t-task-time{
+        width: 100% !important;
+        margin:0 0 10px !important;
+       
+    }
+
+}

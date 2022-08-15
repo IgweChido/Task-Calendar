@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Spline+Sans:wght@500&display=swap');
+
+
+.App{
+    // border: 1px solid red;
+    font-family: 'Poppins', sans-serif !important;
+    padding: 20px;
+    position: relative;
+    
+}
+
+.hold{
+    width: 100vw;
+    // height: 100%;
+    position: fixed;
+}
+
+
+
+/* Large devices (landscape tablets, 1041px and down) ************************************/
+@media only screen and (max-width: 610px){
+    .App{
+      
+        padding: 10px;
+       
+    }
+    
+
+}

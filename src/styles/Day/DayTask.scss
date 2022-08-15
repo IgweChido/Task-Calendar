@@ -1,0 +1,75 @@
+@import '../Timeline.scss';
+
+.dt-main{
+    // border: 1px solid blue;
+    // width: 100%;
+    // height: 100%;
+    position: absolute;
+    width: 14.28%;
+    // top: 200px;
+}
+.dtask-container{
+    // background-color: #e9c4b3;
+    // border: 1px solid red;
+    // margin-top: 8.333 * 12px;
+    padding: 10px;
+    height: 100px;
+    left: 120px;
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+    // top:0;
+    border-radius: 5px 15px ;
+    margin-bottom: 1px;
+    cursor: pointer;
+
+    .dtask-topic{
+        // border: 1px solid green;
+
+        p{
+            font-weight: 600;
+            font-size: 13px;
+            // position: relative !important;
+        }
+
+    }
+
+    .dtask-time{
+        // border: 1px solid red;
+
+        P{
+            // position: relative !important;
+            font-weight: 600;
+            font-size: 13px;
+            position: absolute;
+            bottom: 10px;
+        }
+    }
+
+
+}
+
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+
+    .dtask-container{
+       
+        .dtask-topic{
+           
+    
+            p{
+               display: none;
+            }
+    
+        }
+    
+        .dtask-time{
+           
+    
+            P{
+                display: none;
+            }
+        }
+}
+}

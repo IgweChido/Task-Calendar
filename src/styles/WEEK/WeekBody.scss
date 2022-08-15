@@ -1,0 +1,317 @@
+@import '../Timeline.scss';
+
+//********** Week Body **********//
+.week-body{
+    // border:1px solid blue;
+    margin-top: 3px;
+    height: 95vh;
+    width: 100%;
+    // border-radius:0 0 35px 35px ;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+	scrollbar-width: none;
+
+    
+
+   
+
+
+
+    .week-scroll{
+        margin-top: 50px;
+        // border: 1px solid yellow;
+        padding: 0 0px 0px 30px;
+        position: relative;
+       
+    }
+}
+
+
+.week-body::-webkit-scrollbar{
+	display: none;
+}
+
+
+//********** Week Body **********//
+.week-body1{
+    // border:1px solid purple;
+    margin-top: 3px;
+    height: 95vh;
+    width: 100%;
+    // border-radius:0 0 35px 35px ;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+	scrollbar-width: none;
+
+    
+
+   
+
+
+
+    .week-scroll{
+        margin-top: 50px;
+        // border: 1px solid yellow;
+        padding: 0 0px 0px 30px;
+        position: relative;
+       
+    }
+}
+
+
+.week-body1::-webkit-scrollbar{
+	display: none;
+}
+
+//********** Week Body **********//
+.week-body2{
+    // border:1px solid purple;
+    margin-top: 3px;
+    height: 95vh;
+    width: 100%;
+    // border-radius:0 0 35px 35px ;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+	scrollbar-width: none;
+
+    
+
+   
+
+
+
+    .week-scroll{
+        margin-top: 120px;
+        // border: 1px solid yellow;
+        padding: 0 0px 0px 30px;
+        position: relative;
+       
+    }
+}
+
+
+.week-body2::-webkit-scrollbar{
+	display: none;
+}
+
+
+
+
+//********** Week Time **********//
+
+.week-time{
+    // border:1px solid blue;
+    position: relative;
+    padding: 0px 0px 0px 70px;
+
+    .w-time{
+        // border: 1px solid orange;
+        border-bottom:3px solid $grey;
+        
+       
+        height: 100px;
+        display: flex;
+
+        .wt-p{
+            // border: 1px solid orange;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            font-size: 13px;
+            
+        }
+       
+
+    }
+
+   
+
+    
+}
+
+
+.week-time:nth-child(26){
+    .w-time{
+        border-bottom:none;
+       
+        p{
+            display: none;
+        }
+        
+        
+    }
+}
+
+
+.week-time:nth-child(1){
+    .w-time{
+        border-bottom:3px solid $grey ;
+        // border:1px solid green;
+        height: 10px;
+
+        p{
+            // display: none;
+        }
+        
+        
+    }
+
+
+    .weekt-box{
+        border:none;
+    }
+}
+
+
+
+//********** Week Time Boxes **********//
+
+.weekt-box{
+    // border: 1px solid yellow;
+    width: 14.3%;
+    border-right: 3px solid $grey;
+    height: 100px;
+}
+
+.weekt-box:nth-child(8){
+    border: none;
+
+}
+
+
+
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+
+    .week-body{
+      
+        .week-scroll{
+            // border: 1px solid yellow;
+            padding: 0 0px 0px 10px !important;
+            position: relative;
+           
+        }
+    }
+
+    .week-body1{
+      
+        .week-scroll{
+            // border: 1px solid yellow;
+            padding: 0 0px 0px 10px !important;
+            position: relative;
+           
+        }
+    }
+
+    .week-body2{
+      
+        .week-scroll{
+            // border: 1px solid yellow;
+            padding: 0 0px 0px 10px !important;
+            position: relative;
+           
+        }
+    }
+
+
+
+    .week-time{
+        
+        padding: 0px 0px 0px 35px !important;
+    
+        .w-time{
+          
+            
+            
+    
+            .wt-p{
+                position: absolute;
+                left: 0px !important;
+                bottom: 0px;
+                font-size: 10px;
+                
+            }
+           
+    
+        }
+        
+    }
+    
+
+
+}
+
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 410px){
+
+    .week-body{
+      
+        .week-scroll{
+            // border: 1px solid yellow;
+            padding: 0 0px 0px 10px;
+            position: relative;
+           
+        }
+    }
+
+    .week-body1{
+      
+        .week-scroll{
+            // border: 1px solid yellow;
+            padding: 0 0px 0px 10px;
+            position: relative;
+           
+        }
+    }
+
+    .week-body2{
+      
+        .week-scroll{
+            // border: 1px solid yellow;
+            padding: 0 0px 0px 10px;
+            position: relative;
+           
+        }
+    }
+
+
+    .week-time{
+        
+        
+    
+        .w-time{
+          
+            
+            
+    
+            .wt-p{
+                position: absolute;
+               
+                bottom: 0px;
+                font-size: 10px;
+                
+            }
+           
+    
+        }
+        
+    }
+    
+
+
+}
+
+
+
+
+
+
+
+//********** Five mins **********//
+
+.five-mins{
+    height: 8.333px;
+    // border-bottom: 1px solid yellow;
+}

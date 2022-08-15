@@ -1,0 +1,233 @@
+@import '../Timeline.scss';
+
+.before-purple{
+    // border: 1px solid yellow;
+    
+
+}
+.day-div{
+    padding-top: 5px;
+    // border: 1px solid yellow;
+    // background-color: $mainColor;
+    border-radius: 25px;
+   width: 55px;
+   display: block;
+   margin: auto;
+   position: relative;
+
+
+    .day-day{
+
+        // border: 1px solid yellow;
+        margin-bottom: 15px;
+        
+        
+        p{
+            text-align: center;
+           
+        }
+
+    }
+
+
+    .day-number{
+        // border: 1px solid red;
+        margin-bottom: 5px;
+
+        p{
+            text-align: center;
+            
+        }
+
+    }
+
+
+    .day-circle{
+        // border: 1px solid green;
+        display: flex;
+        // margin: auto;
+        // width: fit-content;
+
+        div{
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $sideColor;
+            // margin-right: 2px;
+            position: absolute;
+            bottom: -5px;
+            right: 50%;
+            margin-right: -3.5px;
+
+           
+        }
+        
+    }
+}
+
+
+
+
+// *******************************************************//
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+
+    .day-div{
+        width: 30px !important;
+        border-radius: 25px !important;
+       
+        .day-day{
+           
+            p{
+                font-size: 13px !important;
+                text-align: center !important;
+               
+            }
+    
+        }
+    
+        .day-number{
+           
+    
+            p{
+                font-size: 13px !important;
+                text-align: center !important;
+                
+            }
+    
+        }
+
+        .day-circle{
+          
+            div{
+                width:5px !important;
+                height: 5px !important;
+                
+    
+               
+            }
+            
+        }
+    }
+    
+}
+
+
+
+
+// *************** Week day colored *********************************************
+
+
+.before-purple1{
+    // border: 1px solid yellow;
+   
+
+}
+.day-div1{
+    padding-top: 5px;
+    // border: 1px solid yellow;
+    background-color: $mainColor;
+    border-radius: 25px;
+   width: 55px;
+   display: block;
+   margin: auto;
+   position: relative;
+
+
+    .day-day1{
+
+        // border: 1px solid yellow;
+        margin-bottom: 15px;
+        
+        
+        p{
+            text-align: center;
+            color:white;
+        }
+
+    }
+
+
+    .day-number1{
+        // border: 1px solid blue;
+        margin-bottom: 5px;
+
+        p{
+            text-align: center;
+            color:white;
+        }
+
+    }
+
+
+    .day-circle1{
+        // border: 1px solid green;
+        display: flex;
+        // margin: auto;
+        // width: fit-content;
+
+        div{
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $sideColor;
+            // margin-right: 2px;
+            position: absolute;
+            bottom: -8px;
+            right: 50%;
+            margin-right: -3.5px;
+
+           
+        }
+        
+    }
+}
+
+
+
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+
+    .day-div1{
+        width: 30px !important;
+        border-radius: 25px !important;
+       
+        .day-day1{
+           
+            p{
+                font-size: 13px !important;
+                text-align: center !important;
+               
+            }
+    
+        }
+    
+        .day-number1{
+           
+    
+            p{
+                font-size: 13px !important;
+                text-align: center !important;
+                
+            }
+    
+        }
+
+        .day-circle1{
+          
+            div{
+                width:5px !important;
+                height: 5px !important;
+                bottom: -6px !important;
+                
+    
+               
+            }
+            
+        }
+    }
+    
+}
+

@@ -1,0 +1,122 @@
+@import './Timeline.scss';
+
+/* Large devices (landscape tablets, 1160px and down) ************************************/
+@media only screen and (min-width: 1290px){
+    .week-task-main{
+        left:110px !important;
+    }
+}
+.week-task-main{
+    border: 1px solid transparent;
+    // width: 100%;
+    // height: 100%;
+    position: absolute;
+    // height: 100px;
+    left:95px;
+    width: 13.178%;
+    // top: 200px;
+}
+.task-container{
+    // background-color: #e9c4b3;
+    // border: 1px solid red;
+    padding: 10px;
+    height: 100px;
+    z-index: 2;
+    // left dependent on the day
+    // left:600%;
+    width: 96%;
+    position: absolute;
+    border-radius: 5px 15px ;
+    margin-bottom: 1px;
+    cursor: pointer;
+
+    .t-topic{
+        // border: 1px solid green;
+
+        p{
+            font-weight: 600;
+            font-size: 13px;
+            // position: relative !important;
+        }
+
+    }
+
+    .t-time{
+        // border: 1px solid red;
+
+        P{
+            // position: relative !important;
+            font-weight: 600;
+            font-size: 13px;
+            position: absolute;
+            bottom: 10px;
+        }
+    }
+
+
+}
+
+/* Large devices (landscape tablets, 950px and down) ************************************/
+@media only screen and (max-width: 950px){
+    .week-task-main{
+        left:85px !important;
+    }
+}
+
+/* Large devices (landscape tablets, 810px and down) ************************************/
+@media only screen and (max-width: 810px){
+    .week-task-main{
+        left:75px !important;
+    }
+}
+
+/* Large devices (landscape tablets, 650px and down) ************************************/
+@media only screen and (max-width: 650px){
+    .week-task-main{
+        left:68px !important;
+    }
+}
+
+
+/* Large devices (landscape tablets, 610px and down) ************************************/
+@media only screen and (max-width: 610px){
+    .week-task-main{
+        left:55px !important;
+    }
+    .task-container{
+        
+    
+        .t-topic{
+            
+    
+            p{
+                display: none;
+            }
+    
+        }
+    
+        .t-time{
+           
+            P{
+                display: none;
+            }
+        }
+    
+    
+    }
+}
+
+
+/* Large devices (landscape tablets, 500px and down) ************************************/
+@media only screen and (max-width: 500px){
+    .week-task-main{
+        left:45px !important;
+    }
+}
+
+/* Large devices (landscape tablets, 3600px and down) ************************************/
+@media only screen and (max-width: 360px){
+    .week-task-main{
+        left:40px !important;
+    }
+}
