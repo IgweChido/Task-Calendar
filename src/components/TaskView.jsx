@@ -11,6 +11,8 @@ import { v4 as uuidv4 } from 'uuid';
 function TaskView() {
 
     const  dispatch = useDispatch()
+    const [filter, setFilter]= useState([])
+    const Tasks = useSelector((store)=>store.taskP)
     const {showTask}= useSelector((state)=>state.showCTask);
     const[setp, setSetp]= useState(false);
     const[setp1, setSetp1]= useState(false);
@@ -35,12 +37,14 @@ function TaskView() {
     const [dayInWeek, setDayInWeek]= useState(["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"])
     
     const[tempMonth, setTempMonth] = useState(monthArrWords[d.getMonth()])
+    const[numMonth, setNumMonth]= useState()
     const[tempYear, setTempYear] = useState(d.getFullYear())
     const[tempDay, setTempDay] = useState(d.getDate())
     const[tempTime, setTempTime] = useState(d.getUTCHours()+2)
     const[tempTime1, setTempTime1] = useState(timeArr[d.getUTCHours()+2])
     const [startt, setStartt]= useState()
     const [cantOpen, setCantOpen]= useState(false)
+    const [clashing, setClashing]= useState(false)
    
 
     // Task states
@@ -314,32 +318,46 @@ const cantopenAddedT=()=>{
    
 }
 
+const Clashed=()=>{
+    setClashing(true)
+    closeTaskOverlay1()
+    setTimeout(()=>{
+        setClashing(false)
+        
+    },1500)
 
-// check if time already exists
-// const filterDay=()=>{
-//     const filteredList = Tasks.filter((tasks)=> (checkWeek(tasks.day))&&((tasks.month === weekT.month)||(tasks.month === weekT.monthNext)||(tasks.month === weekT.monthPrev))&&(tasks.year === weekT.year))
-//     setFilter(filteredList);
+    
+   
+}
 
+
+// set local storage to value of tasks
+useEffect(()=>{
+    
+  localStorage.setItem('tasks', JSON.stringify(Tasks))
+},[Tasks])
    
    
-//   }    
 
 
     // handel Task Submit
     
     const handleTaskSubmit=(e)=>{
-        
+        // filterDay()
+        console.log(filter)
+        const filteredList = Tasks.filter((tasks)=> (tasks.timeIS === tempTime1)&&(tasks.day=== tempDay)&&((tasks.month === tempMonth))&&(tasks.year === tempYear))
         e.preventDefault();
         const dd = new Date(`${tempMonth} ${tempDay} ${tempYear}`)
         let days = dd.getDay()
 
 
-        if(tempYear===d.getFullYear() && tempMonth=== monthArrWords[d.getMonth()] && tempTime < (d.getUTCHours()+2)){
+        if(tempYear===d.getFullYear() && tempMonth=== monthArrWords[d.getMonth()] && tempTime < (d.getUTCHours()+2) && tempDay === d.getDate()){
             cantopenAddedT()
         }
 
-        
-        //   filterDay()
+        else if(filteredList.length > 0){
+            Clashed()
+        }
 
         else{
               dispatch(addTask({
@@ -348,6 +366,7 @@ const cantopenAddedT=()=>{
                 title: title,
                 date:`${tempMonth} ${tempDay}, ${tempYear}`,
                 dayInWeek: days,
+                nuMonth: numMonth,
                 month: tempMonth,
                 day: tempDay,
                 year: tempYear,
@@ -466,6 +485,7 @@ const cantopenAddedT=()=>{
                                 currentMonthArr.map((month, index)=>(
                                     <p key={index} onClick={()=>{
                                         setTempMonth(monthArrWords[currentMonthArr[index]])
+                                        setNumMonth(index)
 
                                     }}>{monthArrWords[currentMonthArr[index]]}</p>
                                 ))
@@ -619,6 +639,12 @@ const cantopenAddedT=()=>{
             {
                 cantOpen && 
                 <AddedTaskPromt word={'Time has already passed'} color={false}/>
+            }
+
+
+            {
+                clashing && 
+                <AddedTaskPromt word={'This Time has been assigned a Task'} color={false}/>
             }
 
 

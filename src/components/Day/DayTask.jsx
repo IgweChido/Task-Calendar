@@ -44,11 +44,15 @@ function DayTask(props) {
 
   // create a style that gives a margin top
   var marginTop;
-
+  const localData = localStorage.getItem('tasks');
+  const localMain= JSON.parse(localData)
   useEffect(()=>{
     const filterDay=()=>{
-    const filteredList = Tasks.filter((tasks)=> (tasks.day === dTimeline.date)&&(tasks.month === dTimeline.month)&&(tasks.year === dTimeline.year))
-    setFilter(filteredList);
+      if(localMain){
+        const filteredList = localMain.filter((tasks)=> (tasks.day === dTimeline.date)&&(tasks.month === dTimeline.month)&&(tasks.year === dTimeline.year))
+        setFilter(filteredList);
+      }
+        
    
 
   }

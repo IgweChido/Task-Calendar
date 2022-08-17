@@ -45,7 +45,8 @@ function TaskContainer() {
     var controlMov;
     const weekArr=['597%','0','100%','200%','300%','400%','500%']
 
-
+    const localData = localStorage.getItem('tasks');
+    const localMain= JSON.parse(localData)
     useEffect(()=>{
       const checkWeek=(task)=>{
         if(weekT){
@@ -60,8 +61,11 @@ function TaskContainer() {
           return false
       }
       const filterDay=()=>{
-      const filteredList = Tasks.filter((tasks)=> (checkWeek(tasks.day))&&((tasks.month === weekT.month)||(tasks.month === weekT.monthNext)||(tasks.month === weekT.monthPrev))&&(tasks.year === weekT.year))
-      setFilter(filteredList);
+        if(localMain){
+           const filteredList = localMain.filter((tasks)=> (checkWeek(tasks.day))&&((tasks.month === weekT.month)||(tasks.month === weekT.monthNext)||(tasks.month === weekT.monthPrev))&&(tasks.year === weekT.year))
+            setFilter(filteredList);
+        }
+     
 
      
      

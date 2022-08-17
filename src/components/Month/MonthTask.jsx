@@ -19,12 +19,16 @@ function MonthTask(props) {
   const [back, setBack]= useState()
 
   // method to filter the day of the month
-
+  const localData = localStorage.getItem('tasks');
+  const localMain= JSON.parse(localData)
 
   useEffect(()=>{
     const filterDay=()=>{
-    const filteredList = Tasks.filter((tasks)=> (tasks.day === props.day)&&(tasks.month === props.tempM)&&(tasks.year === props.year))
-    setFilter(filteredList);
+      if(localMain){
+        const filteredList = localMain.filter((tasks)=> (tasks.day === props.day)&&(tasks.month === props.tempM)&&(tasks.year === props.year))
+        setFilter(filteredList);
+      }
+    
 
   }
 
