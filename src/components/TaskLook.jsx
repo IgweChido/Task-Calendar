@@ -17,6 +17,9 @@ function TaskLook(props) {
     const Tasks = useSelector((store)=>store.taskP)
     const [openAT, setOpenAT]= useState(false)
 
+    const localData = localStorage.getItem('tasks');
+    const localMain= JSON.parse(localData)
+
     // open Added task successfully
     const openAddedT=()=>{
         setOpenAT(true)
@@ -45,7 +48,7 @@ function TaskLook(props) {
 
     const handleDelete=()=>{
        
-        dispatch(deleteTask({id: Tasks[props.tID].id}))
+        dispatch(deleteTask({id: localMain[props.tID].id}))
         dispatch(isNotLooking())
        
     }
@@ -63,17 +66,17 @@ function TaskLook(props) {
 
                 {/* title of the task */}
                 <div className='look-title'>
-                    <p>{Tasks[props.tID].title}</p>
+                    <p>{localMain[props.tID].title}</p>
                 </div>
 
                 {/* Date and day */}
                 <div className='look-date'>
-                    <p>{Tasks[props.tID].date} - {Tasks[props.tID].timeIS}</p>
+                    <p>{localMain[props.tID].date} - {localMain[props.tID].timeIS}</p>
                 </div>
 
                 {/* Note area */}
                 <div className='look-note'>
-                    <p>{Tasks[props.tID].note}
+                    <p>{localMain[props.tID].note}
                     </p>
                 </div>
 

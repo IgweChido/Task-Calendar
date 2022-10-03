@@ -19,6 +19,8 @@ function TaskLookM(props) {
     const Tasks = useSelector((store)=>store.taskP)
     const [openAT, setOpenAT]= useState(false)
 
+    const localData = localStorage.getItem('tasks');
+    const localMain= JSON.parse(localData)
     // open Added task successfully
     const openAddedT=()=>{
         setOpenAT(true)
@@ -48,7 +50,7 @@ function TaskLookM(props) {
     console.log(filter)
 
     const handleDelete=()=>{
-        dispatch(deleteTask({id: Tasks[props.index].id}))
+        dispatch(deleteTask({id: localMain[props.index].id}))
        
         dispatch(mtNotLooking())
        
